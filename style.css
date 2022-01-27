@@ -11,7 +11,7 @@ h1 {
 #quote {
   text-align: center;
   font-size: 50px;
-  margin-top: 300px;
+  margin-top: 50px;
 }
 
 
@@ -38,4 +38,16 @@ button:hover {
 
 button {
   text-align: center;
+}
+
+#date {
+  position: fixed;
+  font-size: 50px;
+  margin-top: 150px;
+  margin-left: 50px;
+}
+
+#name {
+  font-size: 50px;
+  margin-top: 100px;
 }
