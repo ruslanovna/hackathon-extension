@@ -1,8 +1,41 @@
 body {
-  background-image: url('assets/background.jpg');
+  background-image: url('background.jpg');
   background-size: cover;
+  font-family: 'Dongle', sans-serif;
 }
 
 h1 {
+  text-align: center;
+}
+
+#quote {
+  text-align: center;
+  font-size: 50px;
+  margin-top: 300px;
+}
+
+
+#btn {
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  display: block;
+  margin: 0 auto;
+  font-size: 15px;
+  text-align: center;
+  box-shadow: 5px 5px 5px grey;
+}
+
+button {
+  transition-duration: 0.4s;
+}
+
+button:hover {
+  color: blueviolet;
+  cursor: pointer;
+  background-color: rgb(221, 213, 213);
+}
+
+button {
   text-align: center;
 }

@@ -1,23 +1,28 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const title = document.createElement("h1");
-  title.innerText = "Manifest";
-  document.querySelector("body").appendChild(title);
-  // make AJAX call here....
 
-  const quote = document.querySelector('#quote');
-  const button = document.querySelector('#btn')
+  const quote = document.getElementById('quote');
+  const button = document.getElementById('btn');
 
-  button.addEventListener("click", getQuote)
+  button.addEventListener("click", getQuote);
 
 
   function getQuote() {
-      fetch(
-      "https://zenquotes.io/api/quotes",
-      .then((response) => response.json())
-      .then((response) => {
-          console.log(response[0])
-          // quote.innerText = response
+      fetch("https://type.fit/api/quotes")
+      .then((quote) => quote.json())
+      .then((quote) => {
+          const newQuote = document.getElementById("quote");
+          let i = getRandom(1642)
+          console.log(i)
+          newQuote.innerText = `${quote[i]["text"]}`;
+        //div.appendChild(newQuote);
       });
   }
 
+  getQuote();
+
+  function getRandom(max) {
+    return Math.floor(Math.random()*max)
+  }
+
 });
+
