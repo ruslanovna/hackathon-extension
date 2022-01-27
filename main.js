@@ -4,24 +4,20 @@ document.addEventListener("DOMContentLoaded", () => {
   document.querySelector("body").appendChild(title);
   // make AJAX call here....
 
-  fetch(
-    "https://healthruwords.p.rapidapi.com/v1/quotes/?t=Wisdom&maxR=1&size=medium&id=731",
-    {
-      method: "GET",
-      headers: {
-        "x-rapidapi-host": "healthruwords.p.rapidapi.com",
-        "x-rapidapi-key": "4f822fb461mshffae70ceb64bf7dp174871jsn552f30b092a1",
-      },
-    }
-  )
-    .then(quote => quote.json())
-    .then((quote) => {
-      .innerText = `${quote}`
-      console.log(quote);
-    })
-    .catch((err) => {
-      console.error(err);
-    });
+  const quote = document.querySelector('#quote');
+  const button = document.querySelector('#btn')
+
+  button.addEventListener("click", getQuote)
+
+
+  function getQuote() {
+      fetch(
+      "https://zenquotes.io/api/quotes",
+      .then((response) => response.json())
+      .then((response) => {
+          console.log(response[0])
+          // quote.innerText = response
+      });
+  }
+
 });
-
-

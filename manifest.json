@@ -3,23 +3,22 @@
   "name": "Manifest",
   "description": "This extension will provide you daily affirmations to help you manifest the best version of yourself",
   "version": "1.0",
-  "browser_action": {
-    "default_icon": "manifest.png",
-    "default_popup": "index.html" 
-  },
   "permissions": [
     "activeTab"
   ],
 
   "chrome_url_overrides": {
-    "newtab": "myPage.html"
+    "newtab": "index.html"
   },
 
-  "content_script": [
+  "content_scripts": [
     {
-      "html": "index.html"
+        "matches" : [
+            "<all_urls>"
+        ],
+      "html": ["index.html"],
+      "js": ["main.js"],
+      "css": ["style.css"]
     }
   ]
 }
-
-
