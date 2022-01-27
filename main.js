@@ -4,9 +4,10 @@ document.addEventListener("DOMContentLoaded", () => {
   const name = document.getElementById('nameInput')
   const nameP = document.getElementById('name')
 
+
   nameBtn.addEventListener('click', () => {
     nameP.innerText = `${name.value},`;
-    name,value = '';
+    name.value = '';
   })
   
 
